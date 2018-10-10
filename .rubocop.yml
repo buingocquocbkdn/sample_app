@@ -24,6 +24,9 @@ AllCops:
     - 'config/initializers/content_security_policy.rb'
     - 'config/initializers/wrap_parameters.rb'
     - 'config/initializers/backtrace_silencers.rb'
+    - 'config/**/*'
+    - 'install/install.gemspec'
+    - 'sample_app/sample_app.gemspec'
 
 # Indent private/protected/public as deep as method definitions
 Layout/AccessModifierIndentation:

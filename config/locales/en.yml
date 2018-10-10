@@ -2,7 +2,7 @@ en:
   hello: "Hello world"
   layouts:
     application:
-      title: Ruby on Rails Tutorial Sample App
+      title: "Ruby on Rails Tutorial Sample App"
   static_pages:
     home:
       text: This is the home page for the
