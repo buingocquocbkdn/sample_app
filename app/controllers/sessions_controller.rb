@@ -25,9 +25,9 @@ class SessionsController < ApplicationController
       end
       redirect_back_or user
     else
-      message  = t "controllers.sessions.not_active"
-      message += t "controllers.sessions.check_email"
-      flash[:warning] = message
+      flash.now[:danger] = t "controllers.sessions.danger"
+      render :new
+      flash[:warning] = t "controllers.sessions.not_active"
       redirect_to root_path
     end
   end
