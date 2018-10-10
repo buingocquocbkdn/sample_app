@@ -27,6 +27,7 @@ AllCops:
     - 'config/**/*'
     - 'install/install.gemspec'
     - 'sample_app/sample_app.gemspec'
+    - 'Guardfile'
 
 # Indent private/protected/public as deep as method definitions
 Layout/AccessModifierIndentation:
