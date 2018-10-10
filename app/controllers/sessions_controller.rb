@@ -8,16 +8,27 @@ class SessionsController < ApplicationController
 
   def check_unthenticate user
     if user&.authenticate(params[:session][:password])
+      check_active user
+    else
+      flash.now[:danger] = t "controllers.sessions.danger"
+      render :new
+    end
+  end
+
+  def check_active user
+    if user.activated?
       log_in user
       if params[:session][:remember_me] == Settings.check_remember
         remember user
       else
         forget user
       end
-      redirect_to user
+      redirect_back_or user
     else
-      flash.now[:danger] = t "controllers.sessions.danger"
-      render :new
+      message  = t "controllers.sessions.not_active"
+      message += t "controllers.sessions.check_email"
+      flash[:warning] = message
+      redirect_to root_path
     end
   end
 

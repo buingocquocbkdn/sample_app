@@ -4,7 +4,7 @@ length_string:
   pass_min: 6
 options:
   size: 80
-check_remember: 1
+check_remember: "1"
 pages:
   size: 50
   per_page: 10
