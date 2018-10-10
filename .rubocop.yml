@@ -18,7 +18,12 @@ AllCops:
     - 'db/**/*'
     - 'spec/**/*'
     - 'script/rails'
-    - 'config/**/*'
+    - 'config/puma.rb'
+    - 'config/spring.rb'
+    - 'config/environments/*'
+    - 'config/initializers/content_security_policy.rb'
+    - 'config/initializers/wrap_parameters.rb'
+    - 'config/initializers/backtrace_silencers.rb'
 
 # Indent private/protected/public as deep as method definitions
 Layout/AccessModifierIndentation:
