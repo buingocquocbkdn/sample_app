@@ -8,13 +8,22 @@ en:
       home: "Home"
       help: "Help"
       about: "About"
-      login: "Sign up"
+      users: "Users"
+      profile: "Profile"
+      settings: "Settings"
+      logout: "Log out"
+      login: "Log in"
+      account: "Account"
     footer:
       title: 'The <a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a>
         by <a href="http://www.michaelhartl.com/">Michael Hartl</a>'
       about: "About"
       contact: "Contact"
       news: "News"
+  sessions:
+    new:
+      login: "Log in"
+      signup: "Sign up now!"
   shared:
     errors: 'The form contains <%= pluralize(@user.errors.count, "error") %>.'
   static_pages:
@@ -47,7 +56,9 @@ en:
       text: "This will be a signup page for new users."
       create: "Create my account"
       confir: "Confirmation"
-  controller:
+  controllers:
+    sessions:
+      danger: "Invalid email/password combination"
     users:
       create_success: "Welcome to the Sample App!"
       notfound: "Error: User is not found"
