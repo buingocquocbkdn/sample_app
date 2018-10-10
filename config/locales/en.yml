@@ -1,4 +1,40 @@
 en:
+  controllers:
+    account_activations:
+      active: "Account activated!"
+      invalid: "Invalid activation link"
+    application:
+      please_login: "Please log in."
+    microposts:
+      create: "Micropost created!"
+      delete: "Micropost deleted"
+      fail: "Fail delete"
+    sessions:
+      danger: "Invalid email/password combination"
+      not_active: "Account not activated.
+                   Check your email for the activation link. "
+    users:
+      create_success: "Welcome to the Sample App!"
+      notfound: "Error: User is not found"
+      update_success: "Profile updated"
+      please_login: "Please log in."
+      delete_success: "User deleted success"
+      delete_fail: "Delete fail"
+      check_email: "Please check your email to activate your account."
+    password_resets:
+      sent_email: "Email sent with password reset instructions"
+      not_found: "Email address not found"
+      pass_empty: "can't be empty"
+      update_success: "Password has been reset."
+      check_expiration: "Password reset has expired."
+  mailers:
+    user_mailer:
+      active: "Account activation"
+      hi: "Hi"
+      pass_reset: "Password Reset"
+  models:
+    micropost:
+      picture_size: "should be less than 5MB"
   hello: "Hello world"
   layouts:
     application:
@@ -20,6 +56,10 @@ en:
       about: "About"
       contact: "Contact"
       news: "News"
+  microposts:
+    micropost:
+      delete: "delete"
+      sure: "You sure?"
   password_resets:
     new:
       forgot_pass: "Forgot password"
@@ -36,7 +76,14 @@ en:
       new: "New user?"
       pass_reset: "(forgot password)"
   shared:
-    errors: 'The form contains <%= pluralize(@user.errors.count, "error") %>.'
+    error_messages:
+      form_contains: "The form contains"
+      errors: "errors"
+    micropost_form:
+      script: "Maximum file size is 5MB. Please choose a smaller file."
+    user_info:
+      view: "view my profile"
+      micropost: "micropost"
   static_pages:
     home:
       text: 'This is the home page for the
@@ -61,6 +108,13 @@ en:
       title: "Contact"
       text: 'Contact the Ruby on Rails Tutorial about the sample app at the
             <a href="http://www.railstutorial.org/contact">contact page</a>.'
+  helpers:
+    label:
+      user:
+        name: "Name"
+        email: "Email"
+        pass: "Password"
+        pass_confir: "Password confirmation"
   user_mailer:
     account_activation:
       title: "Sample App"
@@ -107,30 +161,4 @@ en:
       attributes:
         user:
           password: "Passwordasgas"
-  controllers:
-    sessions:
-      danger: "Invalid email/password combination"
-      not_active: "Account not activated.
-                   Check your email for the activation link. "
-    users:
-      create_success: "Welcome to the Sample App!"
-      notfound: "Error: User is not found"
-      update_success: "Profile updated"
-      please_login: "Please log in."
-      delete_success: "User deleted success"
-      delete_fail: "Delete fail"
-      check_email: "Please check your email to activate your account."
-    account_activations:
-      active: "Account activated!"
-      invalid: "Invalid activation link"
-    password_resets:
-      sent_email: "Email sent with password reset instructions"
-      not_found: "Email address not found"
-      pass_empty: "can't be empty"
-      update_success: "Password has been reset."
-      check_expiration: "Password reset has expired."
-  mailers:
-    user_mailer:
-      active: "Account activation"
-      hi: "Hi"
-      pass_reset: "Password Reset"
+
