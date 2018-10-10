@@ -10,7 +10,8 @@ class User < ApplicationRecord
     uniqueness: true
   has_secure_password
   validates :password, presence: true,
-    length: {minimum: Settings.length_string.pass_min}
+    length: {minimum: Settings.length_string.pass_min},
+    allow_nil: true
 
   def remember
     self.remember_token = User.new_token
