@@ -4,3 +4,4 @@ length_string:
   pass_min: 6
 options:
   size: 80
+check_remember: 1

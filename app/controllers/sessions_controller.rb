@@ -3,8 +3,13 @@ class SessionsController < ApplicationController
 
   def create
     user = User.find_by email: params[:session][:email].downcase
+    check_unthenticate user
+  end
+
+  def check_unthenticate user
     if user&.authenticate(params[:session][:password])
       log_in user
+      params[:session][:remember_me] == Settings.check_remember ? remember(user) : forget(user)
       redirect_to user
     else
       flash.now[:danger] = t "controllers.sessions.danger"
