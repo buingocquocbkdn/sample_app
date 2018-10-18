@@ -20,8 +20,7 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
     get login_path
     post login_path, params: {
       session: {
-        email: @gmail.com,
-        password: "password"
+        email: @gmail.com
       }
     }
     assert is_logged_in?

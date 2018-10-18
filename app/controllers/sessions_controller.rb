@@ -9,7 +9,11 @@ class SessionsController < ApplicationController
   def check_unthenticate user
     if user&.authenticate(params[:session][:password])
       log_in user
-      params[:session][:remember_me] == Settings.check_remember ? remember(user) : forget(user)
+      if params[:session][:remember_me] == Settings.check_remember
+        remember user
+      else
+        forget user
+      end
       redirect_to user
     else
       flash.now[:danger] = t "controllers.sessions.danger"
