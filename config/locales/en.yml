@@ -59,12 +59,22 @@ en:
         email: "Email"
         pass: "Password"
         pass_confir: "Password confirmation"
+  user_mailer:
+    account_activation:
+      title: "Sample App"
+      hi: "Hi"
+      welcome: "Welcome! Click on the link below to activate your account:"
+      text_file: 'Hi <%= @user.name %>,
+        Welcome to the Sample App! Click on the link below to activate your account:'
+    password_reset:
+      pass_reset: '<%= @greeting %>, find me in app/views/user_mailer/password_reset.html.erb'
   users:
     new:
       signup: "Sign Up"
       text: "This will be a signup page for new users."
       create: "Create my account"
       confir: "Confirmation"
+      active: "Active"
     edit:
         edit: "Edit"
         title: "Update your profile"
@@ -78,6 +88,8 @@ en:
   controllers:
     sessions:
       danger: "Invalid email/password combination"
+      not_active: "Account not activated. "
+      check_email: "Check your email for the activation link."
     users:
       create_success: "Welcome to the Sample App!"
       notfound: "Error: User is not found"
@@ -85,3 +97,11 @@ en:
       please_login: "Please log in."
       delete_success: "User deleted success"
       delete_fail: "Delete fail"
+      check_email: "Please check your email to activate your account."
+    account_activations:
+      active: "Account activated!"
+      invalid: "Invalid activation link"
+  mailer:
+    user_mailer:
+      active: "Account activation"
+      hi: "Hi"
